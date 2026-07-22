@@ -11,7 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import logoAsset from "@/assets/zaped-logo.png.asset.json";
+import { Logo } from "@/components/Logo";
 
 export const Route = createFileRoute("/financeiro")({
   component: FinanceiroPage,
@@ -613,10 +613,9 @@ function FinanceiroPage() {
         <div className="absolute -bottom-20 -right-20 h-96 w-96 rounded-full bg-accent/15 blur-[120px]" />
       </div>
 
-      <img
-        src={logoAsset.url}
-        alt="Zaped"
-        className="absolute left-4 top-4 z-10 h-9 w-auto object-contain sm:left-6 sm:top-6 sm:h-10"
+      <Logo
+        size="sm"
+        className="absolute left-4 top-4 z-10 sm:left-6 sm:top-6"
       />
 
       <Link

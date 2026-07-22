@@ -5,7 +5,7 @@ import { Mail, Lock, Eye, EyeOff, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import logoAsset from "@/assets/zaped-logo.png.asset.json";
+import { Logo } from "@/components/Logo";
 
 export const Route = createFileRoute("/login")({
   component: LoginPage,
@@ -49,11 +49,7 @@ function LoginPage() {
       <div className="relative z-10 w-full max-w-sm">
         {/* Logo separated on top */}
         <div className="mb-8 flex flex-col items-center">
-          <img
-            src={logoAsset.url}
-            alt="Zaped"
-            className="h-24 w-auto object-contain"
-          />
+          <Logo size="lg" />
         </div>
 
         {/* Login card */}

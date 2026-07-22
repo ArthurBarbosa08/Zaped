@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Search, MapPin, Store, ArrowRight } from "lucide-react";
 
 import { Input } from "@/components/ui/input";
-import logoAsset from "@/assets/zaped-logo.png.asset.json";
+import { Logo } from "@/components/Logo";
 
 export const Route = createFileRoute("/selecionar-filial")({
   component: SelecionarFilialPage,
@@ -57,11 +57,7 @@ function SelecionarFilialPage() {
       <div className="relative z-10 w-full max-w-lg">
         {/* Logo separated on top */}
         <div className="mb-8 flex flex-col items-center">
-          <img
-            src={logoAsset.url}
-            alt="Zaped"
-            className="h-24 w-auto object-contain"
-          />
+          <Logo size="lg" />
         </div>
 
         {/* Branch selection card */}

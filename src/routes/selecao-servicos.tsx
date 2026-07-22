@@ -17,7 +17,7 @@ import {
 import { useMemo, useState } from "react";
 
 import { Input } from "@/components/ui/input";
-import logoAsset from "@/assets/zaped-logo.png.asset.json";
+import { Logo } from "@/components/Logo";
 
 export const Route = createFileRoute("/selecao-servicos")({
   component: SelecaoServicosPage,
@@ -113,7 +113,7 @@ function SelecaoServicosPage() {
 
       <div className="relative z-10 mx-auto w-full max-w-5xl">
         <header className="mb-8 flex flex-col items-center text-center">
-          <img src={logoAsset.url} alt="Zaped" className="mb-5 h-16 w-auto object-contain" />
+          <Logo size="md" className="mb-5" />
           <h1 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
             Central de Módulos
           </h1>
