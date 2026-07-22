@@ -1,5 +1,4 @@
 import React from "react";
-import { Zap } from "lucide-react";
 
 interface LogoProps {
   className?: string;
@@ -18,18 +17,15 @@ export function Logo({
 }: LogoProps) {
   const sizes = {
     sm: {
-      iconContainer: "p-1.5 rounded-lg",
-      iconSize: 16,
+      iconSize: 24,
       textSize: "text-lg",
     },
     md: {
-      iconContainer: "p-2 rounded-xl",
-      iconSize: 24,
+      iconSize: 40,
       textSize: "text-2xl",
     },
     lg: {
-      iconContainer: "p-3 rounded-2xl",
-      iconSize: 36,
+      iconSize: 64,
       textSize: "text-4xl",
     },
   };
@@ -38,16 +34,12 @@ export function Logo({
 
   return (
     <div className={`flex items-center gap-3 select-none ${className}`}>
-      <div
-        className={`relative flex items-center justify-center bg-gradient-to-tr from-primary to-amber-500 text-primary-foreground shadow-lg shadow-primary/20 ${currentSize.iconContainer} ${iconClassName}`}
-      >
-        <Zap
-          size={currentSize.iconSize}
-          className="fill-current text-white animate-pulse-slow"
-        />
-        {/* Subtle glow effect */}
-        <div className="absolute inset-0 -z-10 rounded-inherit bg-primary/30 blur-md" />
-      </div>
+      <img
+        src="/favicon.ico"
+        alt="Zaped"
+        style={{ width: currentSize.iconSize, height: currentSize.iconSize }}
+        className={`object-contain ${iconClassName}`}
+      />
       {showText && (
         <span
           className={`font-black tracking-tight text-foreground ${currentSize.textSize} ${textClassName}`}
